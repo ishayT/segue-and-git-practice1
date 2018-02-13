@@ -11,7 +11,6 @@ import UIKit
 class FirstViewController: UIViewController, CanRecive {
     
     @IBOutlet weak var label1VC: UILabel!
-    
     @IBOutlet weak var textField1VC: UITextField!
     
     override func viewDidLoad() {
@@ -26,10 +25,21 @@ class FirstViewController: UIViewController, CanRecive {
 
     @IBAction func goTo2VC(_ sender: UIButton) {
         
+        performSegue(withIdentifier: "goToSecond", sender: self)
     }
     
-    func dataRecived() {
-        //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecond" {
+            
+            let secondVC = segue.destination as! SecondViewController
+            secondVC.data = textField1VC.text!
+            
+            secondVC.delegate = self
+        }
+    }
+    
+    func dataRecived(data: String) {
+        label1VC.text = data
     }
     
     

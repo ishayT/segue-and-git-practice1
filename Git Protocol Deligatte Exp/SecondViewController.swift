@@ -10,20 +10,23 @@ import UIKit
 
 protocol CanRecive {
     
-    func dataRecived()
+    func dataRecived(data: String)
 }
 
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var label2VC: UILabel!
-    
     @IBOutlet weak var textField2VC: UITextField!
     
+    var data = ""
+    var delegate : CanRecive?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        label2VC.text = data
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +36,8 @@ class SecondViewController: UIViewController {
     
     @IBAction func goTo1VC(_ sender: UIButton) {
         
+        delegate?.dataRecived(data: textField2VC.text!)
+        dismiss(animated: true, completion: nil)
     }
     
 
