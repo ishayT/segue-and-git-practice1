@@ -40,6 +40,9 @@
                                 <state key="normal" title="Go To Second">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goTo2VC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igx-h9-Dqk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-U1-rRv">
                                 <rect key="frame" x="129" y="491" width="117" height="36"/>
@@ -49,12 +52,17 @@
                                 <state key="normal" title="Change color">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="chngeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Da-ht-OcM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="label1VC" destination="5ao-Zs-rGO" id="HSh-oc-BXr"/>
+                        <outlet property="textField1VC" destination="0Cd-xi-du7" id="bhq-3L-bXq"/>
                         <segue destination="8c1-Rh-XEe" kind="show" identifier="goToSecond" id="4Cu-vm-Yyr"/>
                     </connections>
                 </viewController>
@@ -92,11 +100,18 @@
                                 <state key="normal" title="Go To First">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goTo1VC:" destination="8c1-Rh-XEe" eventType="touchUpInside" id="xpl-Q5-vLr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="EUZ-tF-aXf"/>
                     </view>
+                    <connections>
+                        <outlet property="label2VC" destination="Y8l-ZZ-Sg6" id="mtE-8R-xcH"/>
+                        <outlet property="textField2VC" destination="8RR-UF-o0H" id="46N-mn-thy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ef2-hP-gou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

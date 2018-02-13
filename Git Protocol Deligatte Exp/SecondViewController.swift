@@ -8,8 +8,18 @@
 
 import UIKit
 
+protocol CanRecive {
+    
+    func dataRecived()
+}
+
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var label2VC: UILabel!
+    
+    @IBOutlet weak var textField2VC: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +31,19 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func goTo1VC(_ sender: UIButton) {
+        
     }
-    */
+    
 
 }
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destinationViewController.
+ // Pass the selected object to the new view controller.
+ }
+ */

@@ -8,8 +8,12 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class FirstViewController: UIViewController, CanRecive {
+    
+    @IBOutlet weak var label1VC: UILabel!
+    
+    @IBOutlet weak var textField1VC: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,19 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func goTo2VC(_ sender: UIButton) {
+        
+    }
+    
+    func dataRecived() {
+        //
+    }
+    
+    
+    
+    @IBAction func chngeColor(_ sender: UIButton) {
+        view.backgroundColor = UIColor.blue
+    }
+    
 }
 
